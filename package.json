@@ -1,0 +1,34 @@
+{
+  "name": "airframe2",
+  "version": "1.0.0",
+  "description": "A SCSS utility framework for rapidly building responsive webpages",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 styles.scss dist/styles.css",
+    "css-minify": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output dist/styles.min.css dist/styles.css",
+    "process-styles": "npm run compile-styles && npm run css-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arron21/airframe2.git"
+  },
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "author": "Arron McCrory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arron21/airframe2/issues"
+  },
+  "homepage": "https://github.com/arron21/airframe2#readme",
+  "dependencies": {
+    "http-server": "^13.0.1",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.3.3",
+    "node-sass": "^6.0.1"
+  }
+}
